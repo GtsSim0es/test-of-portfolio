@@ -5,7 +5,7 @@
       <profileVue/>
       <menuVue/>
     </div>
-    <Home
+    <HomeVue/>
   </div>
 </template>
 
@@ -26,12 +26,10 @@ export default {
 
 <style>
   *{
+    font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
     list-style: none;
   }
 
@@ -53,5 +51,6 @@ export default {
     height: 100vh;
     width: 3vh;
     float: left;
+    position: fixed;
   }
 </style>
