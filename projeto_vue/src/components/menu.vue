@@ -4,12 +4,14 @@
     <a href="#"><li>Home</li></a>
     <a href="#"><li>Projetos</li></a>
     <a href="#"><li>Contato</li></a>
+    <a href="#"><li>Contato</li></a>
+    <a href="#"><li>Contato</li></a>
   </ul>
 </template>
 
 <script>
   export default {
-    name: 'menu-1'
+    name: 'menu-vue'
   }
 </script>
 
@@ -18,7 +20,9 @@
   {
 
     background-color: rgb(26, 26, 26);
-    width: 22%;
+   
+    margin-left: auto;
+    margin-right: auto;
   }
 
   li 
@@ -26,7 +30,7 @@
     margin-top: 3px;
     width: 100%;
     background-color: rgb(43, 43, 43);
-    line-height: 12vh;
+    line-height: 8vh;
     font-size: 18px;
     float: left;
     text-align: center;
