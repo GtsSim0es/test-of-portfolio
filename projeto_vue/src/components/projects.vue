@@ -1,46 +1,41 @@
 <template>
-  <div>
-    <div class="bar"></div>
-    <div class="menu">
-      <profileVue/>
-      <menuVue/>
-    </div>
-    <projectsVue/>
-    <HomeVue/>
-    
-  </div>
+    <div class="app">
+        <carousel >
+            <carousel-slide v-for="slide in slides" :key="slide" class="carousel-slider">
+                <img :src="slide" :alt="slide">
+            </carousel-slide>
+        </carousel>
+    </div>    
 </template>
 
 <script>
-import menuVue from './components/Sidebar/menu.vue'
-import profileVue from './components/Sidebar/profile.vue'
-import HomeVue from './components/home.vue'
-import projectsVue from './components/projects.vue'
-
+import Carousel from './carousel/Carousel.vue';
+import CarouselSlide from './carousel/CarouselSlide';
 
 export default {
-  name: 'App',
-  components: {
-    menuVue,
-    profileVue,
-    HomeVue,
-    projectsVue
-}
+    name: 'projects-vue',
+    data(){
+        return {
+            slides: [
+                'https://picsum.photos/id/230/600/300',
+                'https://picsum.photos/id/231/600/300',
+                'https://picsum.photos/id/232/600/300',
+                'https://picsum.photos/id/233/600/300',
+                'https://picsum.photos/id/234/600/300',
+                'https://picsum.photos/id/235/600/300',
+                'https://picsum.photos/id/236/600/300',
+            ]
+        }
+    },
+
+    components : {
+        Carousel : Carousel,
+        CarouselSlide : CarouselSlide,
+    }
 }
 </script>
 
-
 <style>
-  *{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    list-style: none;
-  }
-
     .app {
         display:flex;
         justify-content: center;
@@ -90,20 +85,4 @@ export default {
         height:100%;
     }
 
-
-  .menu{
-    margin-left: 3vh;
-    width: 20%;
-    height: 100vh;
-    background-color: rgb(59, 59, 59);
-    box-shadow: 5px -3px 10px rgb(92, 92, 92);
-    position: fixed;
-  }
-
-  div:empty {
-    background: rgb(31, 31, 31);
-    height: 100vh;
-    width: 3vh;
-    float: left;
-  }
 </style>

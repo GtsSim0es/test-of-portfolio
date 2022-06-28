@@ -11,3 +11,13 @@
 <style scoped>
  
 </style>
+
+<div>
+    <div class="bar"></div>
+    <div class="menu">
+      <profileVue/>
+      <menuVue/>
+      
+    </div>
+    <HomeVue/>
+  </div>
