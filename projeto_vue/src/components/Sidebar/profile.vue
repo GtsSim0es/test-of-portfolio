@@ -2,8 +2,8 @@
     <div class="back">
         <div class="logo">
             <a href=""><img class="imgG" src="img/GitHub.png"></a> 
-            <a href=""><img src="img/linkedin.png"></a> 
-            <a href=""><img src="img/mail.png"></a> 
+            <a href=""><img class="imgG" src="img/linkedin.png"></a> 
+            <a href=""><img class="imgG" src="img/mail.png"></a> 
         </div>
         <div class="align">
         <h1>{{name}}</h1> <br>
@@ -17,7 +17,7 @@
     name: 'profile-vue',
     data(){
         return{
-            name:'Gabriel Terra Simões',
+            name:'Gabriel Simões',
             dev: 'Front-End',
             graduacao: 'Computer Engineering'
         }
@@ -38,10 +38,11 @@
 
 h1 {
     font-size: 25px;
+    float: right;
 }
 
 h2 {
-    margin-top: -2vh;
+
     float: right;
     font-size: 17px;
 }
@@ -66,5 +67,15 @@ img{
     float: left;
 }
 
+@media (max-width: 1300px){
+.imgG{
+    margin-right: -0.2vh;
+    width: 15%;
+}
+.logo {
+    margin-left: 4vh;
+}
+
+}
 
 </style>

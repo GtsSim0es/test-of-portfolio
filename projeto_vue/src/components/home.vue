@@ -35,4 +35,11 @@ p{
     margin: 10vh;
     font-size: 20px;
 }
+
+@media (max-width:999px) {
+  div{
+    float: right;
+    width: 97vw;
+  }
+}
 </style>

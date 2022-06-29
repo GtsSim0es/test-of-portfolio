@@ -41,6 +41,10 @@ export default {
     vertical-align: baseline;
     list-style: none;
   }
+
+  body{
+    overflow-x: hidden;
+  }
   .menu{
     margin-left: 5vh;
     width: 20%;
@@ -49,6 +53,10 @@ export default {
     box-shadow: 5px -3px 10px rgb(92, 92, 92);
     position: fixed;
   }
-
+@media (max-width: 999px){
+  .menu{
+        display: none;
+    }
+}
 
 </style>

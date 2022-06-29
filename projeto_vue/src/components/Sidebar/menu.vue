@@ -44,7 +44,7 @@
   a 
   {
     font-weight: 800;
-        color: rgba(0,0,0,0.7);
+    color: rgba(0,0,0,0.7);
     text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
     text-decoration: none;
   }
@@ -53,5 +53,11 @@
   {
     color: white;
   }
+
+@media (max-width: 999px){
+
+
+}
+
 
 </style>

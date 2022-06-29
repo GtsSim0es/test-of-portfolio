@@ -2,7 +2,7 @@
     <div class="bar">
         <label for=""><img class="imgmenu" src="img/menu.png" alt=""></label>
         <div class="menu1">
-            <a href=""><img class="imgp" src="img/home.png"></a>
+            <img class="imgp" src="img/home.png">
         </div>
     </div>
 </template>
@@ -33,9 +33,11 @@
     margin-left: 0.6vh;
 }
 
+
 .menu1{
     margin-top: 15vh;
 }
+
 
 </style>
 
