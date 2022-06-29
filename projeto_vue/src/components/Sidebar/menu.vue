@@ -18,9 +18,7 @@
 <style scoped>
   ul 
   {
-
     background-color: rgb(26, 26, 26);
-   
     margin-left: auto;
     margin-right: auto;
   }
@@ -30,7 +28,7 @@
     margin-top: 3px;
     width: 100%;
     background-color: rgb(43, 43, 43);
-    line-height: 8vh;
+    line-height: 6vh;
     font-size: 18px;
     float: left;
     text-align: center;
@@ -45,14 +43,15 @@
 
   a 
   {
-    color: #DDD;
+    font-weight: 800;
+        color: rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
     text-decoration: none;
-
   }
 
   a:hover 
   {
-    color: rgb(38, 0, 255);
+    color: white;
   }
 
 </style>

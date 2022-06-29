@@ -1,10 +1,13 @@
 <template>
     <div class="back">
-        <div class="photo"><img src="img/profile.JPG" > <br></div>
-    
+        <div class="logo">
+            <a href=""><img class="imgG" src="img/GitHub.png"></a> 
+            <a href=""><img src="img/linkedin.png"></a> 
+            <a href=""><img src="img/mail.png"></a> 
+        </div>
         <div class="align">
-        {{name}} <br>
-        {{graduacao}}
+        <h1>{{name}}</h1> <br>
+        <h2>{{graduacao}}</h2> 
         </div>
     </div>  
 </template>
@@ -23,13 +26,31 @@
 </script>
 
 <style scoped>
+*{
+    font-weight: 800;
+    color: rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+}
+
+.logo {
+    margin-left: 5.5vh;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    margin-top: -2vh;
+    float: right;
+    font-size: 17px;
+}
 .back{
-    background-color:rgb(43, 43, 43);
-    height: 30vh;
+    background-color:#222;
+    height: 20vh;
 }
 .align{
     float: right;
-    margin-top: 15vh;
     margin-right: 3vh;
 }
 
@@ -40,8 +61,10 @@
 }
 
 img{
-    width: 50%;
-    float: right;
+    width: 10%;
     margin: 3vh;
+    float: left;
 }
+
+
 </style>

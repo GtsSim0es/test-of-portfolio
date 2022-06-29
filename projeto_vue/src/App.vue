@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="bar"></div>
+    <menuside/>
     <div class="menu">
       <profileVue/>
       <menuVue/>
     </div>
-    <projectsVue/>
+
     <HomeVue/>
     
   </div>
@@ -15,7 +15,8 @@
 import menuVue from './components/Sidebar/menu.vue'
 import profileVue from './components/Sidebar/profile.vue'
 import HomeVue from './components/home.vue'
-import projectsVue from './components/projects.vue'
+import menuside from './components/Sidebar/menuside.vue'
+
 
 
 export default {
@@ -24,7 +25,8 @@ export default {
     menuVue,
     profileVue,
     HomeVue,
-    projectsVue
+    menuside,
+
 }
 }
 </script>
@@ -36,74 +38,17 @@ export default {
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
     list-style: none;
   }
-
-    .app {
-        display:flex;
-        justify-content: center;
-    }
-    .carousel {
-        position:relative;
-        overflow: hidden;
-        width:800px;
-        height:500px;
-        z-index:10;
-    }
-    .btn {
-        padding:5px 10px;
-        background-color:rgba(0,0,0,0.5);
-        border:1px solid transparent;
-        margin:5px 10px;
-        color:#FFF;
-        height:50px;
-        width:50px;
-        position:absolute;
-        margin-top:-25px;
-        z-index:2;
-    }
-    .btn:hover {
-        cursor: pointer;
-    }
-    .btn:focus{
-        outline:none;
-    }
-    .btn-next {
-        top:50%;
-        right:0;
-    }
-    .btn-prev {
-        top:50%;
-        left:0;
-    }
-    .carousel-slider {
-        position:absolute;
-        top:0;
-        left:0;
-        bottom:0;
-        right:0;
-    }
-    .carousel-slider img {
-        width:100%;
-        height:100%;
-    }
-
-
   .menu{
-    margin-left: 3vh;
+    margin-left: 5vh;
     width: 20%;
     height: 100vh;
-    background-color: rgb(59, 59, 59);
+    background-color: #222;
     box-shadow: 5px -3px 10px rgb(92, 92, 92);
     position: fixed;
   }
 
-  div:empty {
-    background: rgb(31, 31, 31);
-    height: 100vh;
-    width: 3vh;
-    float: left;
-  }
+
 </style>
