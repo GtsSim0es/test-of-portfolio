@@ -104,6 +104,7 @@ label:hover{
     .menu1{
         margin-top: 2vh;
     }
+    
 }
 
 @keyframes menu1 {
