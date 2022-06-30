@@ -1,17 +1,18 @@
 <template>
     <div class="bar">
-        <button id="menunav" @click="showmenu"></button>
-        <label for="menunav"><img class="imgmenu" src="img/menu.png" alt=""></label>
         <div class="menu1">
             <img class="imgp" src="img/home.png">
+            <img class="imgp" id="imgP" src="img/project.png">
+            <img class="imgp" id="imgC" src="img/contact.png">
+        </div>
         </div>
 
 <div class="menu">
   <div class="back">
         <div class="logo">
-            <a href=""><img class="imgG" src="img/GitHub.png"></a> 
-            <a href=""><img class="imgG" src="img/linkedin.png"></a> 
-            <a href=""><img class="imgG" src="img/mail.png"></a> 
+            <a href="https://github.com/GtsSim0es"><img class="imgG" src="img/GitHub.png"></a> 
+            <a href="https://www.linkedin.com/in/gabriel-sim0es"><img class="imgG" src="img/linkedin.png"></a> 
+            <a href="mailto:gabi.tsimoes@hotmail.com"><img class="imgG" src="img/mail.png"></a> 
         </div>
         <div class="align">
         <h1>{{name}}</h1> <br>
@@ -23,12 +24,10 @@
     <a href="#"><li>Home</li></a>
     <a href="#"><li>Projetos</li></a>
     <a href="#"><li>Contato</li></a>
-    <a href="#"><li>Contato</li></a>
-    <a href="#"><li>Contato</li></a>
   </ul>
 
 </div>
-    </div>
+
 </template>
 
 <script>
@@ -42,10 +41,21 @@
         }
     },
     methods: {
-        showmenu(){
-    window.alert("askdashjd")
-    this.$emit('menushow')
-  }
+        showmenu()
+        {
+            var btn = document.querySelector('#menunav')
+            var container = document.querySelector('.menu')
+
+            btn.addEventListener('click', function(){
+                if(container.style.display === "block"){
+                    container.style.display = "none"
+                } else {
+                    container.style.display = "block"
+                }
+            })
+
+            this.$emit('menushow')  
+        }
     }
     }
   
@@ -77,9 +87,32 @@ label:hover{
     margin-left: 0.6vh;
 }
 
+#imgP{
+    margin-top: 0.2vh;
+}
+
+#imgC{
+    margin-top: -0.3vh;
+}
+
 
 .menu1{
-    margin-top: 15vh;
+    margin-top: 23.5vh;
+}
+
+@media (max-width: 999px) {
+    .menu1{
+        margin-top: 2vh;
+    }
+}
+
+@keyframes menu1 {
+  from {
+    margin-top: 23.5vh;
+  }
+  to {
+    margin-top: 2vh;
+  }
 }
 
 ul 
@@ -142,9 +175,10 @@ h2 {
 }
 .back{
     background-color:#222;
-    height: 20vh;
+    height: 25vh;
 }
 .align{
+    margin-top: 2vh;
     float: right;
     margin-right: 3vh;
 }
@@ -165,31 +199,33 @@ img:hover{
     transform: scale(1.1);
 }
 
-@media (max-width: 1300px){
-.imgG{
-    margin-right: -0.2vh;
-    width: 15%;
-}
-.logo {
-    margin-left: 4vh;
-}
-
-}
 .menu{
-    margin-top: -17.8vh;
+
     margin-left: 5vh;
-    width: 20%;
+    width: 20vw;
     height: 100vh;
     background-color: #222;
     box-shadow: 5px -3px 10px rgb(92, 92, 92);
     position: fixed;
   }
 
+
 @media (max-width: 999px){
   .menu{
         display: none;
     }
 }
+
+@media (max-width: 1300px){
+.imgG{
+    margin-right: -0.2vh;
+    width: 15%; 
+}
+.logo {
+    margin-left: 4vh;
+}
+}
+
 </style>
 
 
