@@ -2,20 +2,22 @@
   <div>
     <menuside/>
     <HomeVue/>
-    
+    <Projects/>
   </div>
 </template>
 
 <script>
 import HomeVue from './components/home.vue'
 import menuside from './components/Sidebar/menuside.vue'
+import Projects from './components/projects.vue'
 
 export default {
   name: 'App',
   components: {
     HomeVue,
-    menuside
-  }
+    menuside,
+    Projects
+}
 }
 </script>
 
